@@ -9,5 +9,19 @@ const body = document.querySelector("body");
 button.addEventListener("click", () => {
   const randomPerson = data[Math.floor(Math.random() * data.length)];
   nameDisplay.textContent = randomPerson.name;
-  body.style.backgroundColor = `hsl(${Math.random() * 360}, ${randomNumber()}%, ${randomNumber()}%)`;
+  //body.style.backgroundColor = `hsl(${Math.random() * 360}, ${randomNumber()}%, ${randomNumber()}%)`;
+});
+
+// change the color scheme when dark mode radio button is clicked
+const darkModeRadio = document.getElementById("dark");
+const lightModeRadio = document.getElementById("light");
+
+darkModeRadio.addEventListener("change", () => {
+  body.classList.remove("bg-gray-100");
+  body.classList.add("bg-gray-800", "text-white");
+});
+
+lightModeRadio.addEventListener("change", () => {
+  body.classList.remove("bg-gray-800", "text-white");
+  body.classList.add("bg-gray-100");
 });
