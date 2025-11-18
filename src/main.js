@@ -18,10 +18,10 @@ const lightModeRadio = document.getElementById("light");
 
 darkModeRadio.addEventListener("change", () => {
   body.classList.remove("bg-gray-100");
-  body.classList.add("bg-gray-800", "text-white");
+  body.classList.add("bg-green-900", "text-white");
 });
 
 lightModeRadio.addEventListener("change", () => {
-  body.classList.remove("bg-gray-800", "text-white");
-  body.classList.add("bg-gray-100");
+  body.classList.remove("bg-green-900", "text-white");
+  body.classList.add("bg-green-400");
 });
