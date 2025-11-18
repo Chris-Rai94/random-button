@@ -10,6 +10,10 @@ button.addEventListener("click", () => {
   const randomPerson = data[Math.floor(Math.random() * data.length)];
   nameDisplay.textContent = randomPerson.name;
   //body.style.backgroundColor = `hsl(${Math.random() * 360}, ${randomNumber()}%, ${randomNumber()}%)`;
+  button.classList.add("transform", "scale-95");
+  setTimeout(() => {
+    button.classList.remove("transform", "scale-95");
+  }, 100);
 });
 
 // change the color scheme when dark mode radio button is clicked
